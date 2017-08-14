@@ -15,7 +15,7 @@ namespace CodeWarsTests.SumOfNumbers
                 return a;
 
             _start = Math.Min(a, b);
-            _end = Math.Min(a, b);
+            _end = Math.Max(a, b);
 
             return Enumerable.Range(_start, _end - _start + 1).Sum();
         }
