@@ -1,5 +1,5 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 using System.Linq;
 
 namespace CodeWarsTests.SumOfNumbers
@@ -14,19 +14,10 @@ namespace CodeWarsTests.SumOfNumbers
             if (a == b)
                 return a;
 
-            SetStartAndEnd(a, b);
-            return Enumerable.Range(_start, _end - _start + 1).Sum();
-        }
+            _start = Math.Min(a, b);
+            _end = Math.Min(a, b);
 
-        void SetStartAndEnd(int a, int b)
-        {
-            _start = a;
-            _end = b;
-            if (a > b)
-            {
-                _start = b;
-                _end = a;
-            }
+            return Enumerable.Range(_start, _end - _start + 1).Sum();
         }
     }
 
