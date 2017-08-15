@@ -48,6 +48,7 @@
     <Compile Include="PlayingWithDigits\DigPow.cs" />
     <Compile Include="SumOfNumbers\Sum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SumOfOddNumbers\SumOfOddNumbers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
