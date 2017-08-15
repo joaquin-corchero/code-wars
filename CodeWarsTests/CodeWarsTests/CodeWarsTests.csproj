@@ -45,6 +45,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildAPileOfCubes\ASum.cs" />
     <Compile Include="FindSmallestInt\SmallestIntegerFinder.cs" />
     <Compile Include="PlayingWithDigits\DigPow.cs" />
     <Compile Include="SortTheOdd\SortTheOdd.cs" />
