@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace CodeWarsTests.TortoiseRacing
@@ -11,21 +7,12 @@ namespace CodeWarsTests.TortoiseRacing
     {
         public static int[] Race(int aSpeed, int bSpeed, int lead)
         {
-            //distance = speed * time;
-            var timeDifference = ((decimal)lead / (decimal)aSpeed);
+            if (aSpeed >= bSpeed)
+                return null;
 
-            bSpeed* t = aSpeed * t + minutesDifference;
+            var t = TimeSpan.FromSeconds((lead * 3600) / (bSpeed - aSpeed));
 
-            var t = minutesDifference / 
-
-            var distance = 500;
-            var time = distance / aSpeed;
-            
-            var diference = bSpeed - aSpeed;
-
-            var pp = (decimal)diference / (decimal)(bSpeed - lead);
-
-            return new int[3];
+            return new int[3] { t.Hours, t.Minutes, t.Seconds};
         }
     }
 
