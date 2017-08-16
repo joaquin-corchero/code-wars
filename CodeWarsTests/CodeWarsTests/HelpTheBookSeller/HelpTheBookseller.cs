@@ -58,9 +58,9 @@ namespace CodeWarsTests
         [Test]
         public void Test3()
         {
-            string[] art = new string[];
+            string[] art = new string[0];
             String[] cd = new String[] { "A", "B", "Z" };
-            Assert.AreEqual("(A : 200) - (B : 1140) - (Z : 0)", StockList.stockSummary(art, cd));
+            Assert.AreEqual("", StockList.stockSummary(art, cd));
         }
     }
 
