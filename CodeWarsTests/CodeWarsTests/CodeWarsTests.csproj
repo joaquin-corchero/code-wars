@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildAPileOfCubes\ASum.cs" />
+    <Compile Include="FindMissingLetter\FindMissingLetter.cs" />
     <Compile Include="FindSmallestInt\SmallestIntegerFinder.cs" />
     <Compile Include="GetTheMiddleCharacter\GetTheMiddleCharacter.cs" />
     <Compile Include="PlayingWithDigits\DigPow.cs" />
