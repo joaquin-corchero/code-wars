@@ -63,6 +63,4 @@ namespace CodeWarsTests
             Assert.AreEqual("", StockList.stockSummary(art, cd));
         }
     }
-
-
 }
