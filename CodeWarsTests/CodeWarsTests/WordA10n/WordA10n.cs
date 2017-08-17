@@ -1,34 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace CodeWarsTests.WordA10n
 {
     public class Abbreviator
     {
+        private static StringBuilder _result;
         public static string Abbreviate(string input)
         {
-            var result = new StringBuilder();
-            var words = input.Split(' ');
-            foreach (var word in words)
-            {
+            _result = new StringBuilder();
+            foreach (var word in input.Split(' '))
+                TranformWordInNecessary(word);
 
-                //input.Where(Char.IsPunctuation).Distinct().ToList();
-                if (word.Length < 4)
+            return _result.ToString().Trim();
+        }
+
+        private static void TranformWordInNecessary(string word)
+        {
+            var accumulator = new StringBuilder();
+            foreach (var c in word.Select(c => c))
+            {
+                if (!Char.IsPunctuation(c))
                 {
-                    result.Append(word);
+                    accumulator.Append(c);
                     continue;
                 }
 
-                result.Append($" {word.FirstOrDefault()}{word.Length - 2}{word.LastOrDefault()}");
+                _result.Append(Transform(accumulator.ToString()));
+                _result.Append(c);
+                accumulator = new StringBuilder();
             }
 
-            return result.ToString().Trim();
+            _result.Append(Transform(accumulator.ToString()));
+            _result.Append(' ');
         }
+
+        private static string Transform(string input)
+        {
+            if (input.Length < 4)
+                return input;
+            
+            return $"{input.FirstOrDefault()}{input.Length - 2}{input.LastOrDefault()}";
+        }
+
     }
 
 
