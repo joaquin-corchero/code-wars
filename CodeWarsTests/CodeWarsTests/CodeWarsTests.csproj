@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildAPileOfCubes\ASum.cs" />
+    <Compile Include="CountTheSmileyFaces\CountTheSmileyFaces.cs" />
     <Compile Include="FindMissingLetter\FindMissingLetter.cs" />
     <Compile Include="FindSmallestInt\SmallestIntegerFinder.cs" />
     <Compile Include="GetTheMiddleCharacter\GetTheMiddleCharacter.cs" />
     <Compile Include="TortoiseRacing\TortoiseRacing.cs" />
+    <None Include="CountTheSmileyFaces\Readme.md" />
     <None Include="HelpTheBookSeller\Readme.md" />
     <Compile Include="HelpTheBookSeller\HelpTheBookseller.cs" />
     <Compile Include="MultiplesOf3And5\MultiplesOf3And5.cs" />
