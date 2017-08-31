@@ -7,7 +7,7 @@ namespace CodeWarsTests.LengthOfMissingArray
     {
         public static int GetLengthOfMissingArray(object[][] arrayOfArrays)
         {
-            if (arrayOfArrays.Length == 0)
+            if (arrayOfArrays == null || arrayOfArrays.Length == 0 || arrayOfArrays.Any(r=> r == null || r.Length == 0))
                 return 0;
 
             var lengths = arrayOfArrays
@@ -40,7 +40,7 @@ namespace CodeWarsTests.LengthOfMissingArray
         [Test]
         public void tt()
         {
-            Assert.AreEqual(6, Kata.GetLengthOfMissingArray(
+            Assert.AreEqual(0, Kata.GetLengthOfMissingArray(
              new object[][] {
                     new object[] { 1, 1, 1 },
                     new object[] { 2, 0, 0, 0, 2 },
@@ -48,7 +48,7 @@ namespace CodeWarsTests.LengthOfMissingArray
                     new object[] { 0, 2 },
                     new object[] { 4, 1, 3, 4 },
                     new object[] { 3, 3, 3, 0, 3, 3, 3 },
-                    new object[] { },
+                    null,
                     new object[] { 1, 2, 3, 1, 3, 1, 4, 4},
                     new object[] {0, 1, 1, 1, 4, 3, 3, 1, 1 }
              }));
