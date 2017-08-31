@@ -40,7 +40,7 @@ namespace CodeWarsTests.LengthOfMissingArray
         [Test]
         public void tt()
         {
-            Assert.AreEqual(3, Kata.GetLengthOfMissingArray(
+            Assert.AreEqual(6, Kata.GetLengthOfMissingArray(
              new object[][] {
                     new object[] { 1, 1, 1 },
                     new object[] { 2, 0, 0, 0, 2 },
