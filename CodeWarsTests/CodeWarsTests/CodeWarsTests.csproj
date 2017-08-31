@@ -50,6 +50,7 @@
     <Compile Include="FindMissingLetter\FindMissingLetter.cs" />
     <Compile Include="FindSmallestInt\SmallestIntegerFinder.cs" />
     <Compile Include="GetTheMiddleCharacter\GetTheMiddleCharacter.cs" />
+    <Compile Include="Graph\TreeOrder.cs" />
     <Compile Include="LengthOfMissingArray\LengthOfMissingArray.cs" />
     <Compile Include="TortoiseRacing\TortoiseRacing.cs" />
     <Compile Include="WordA10n\WordA10n.cs" />
