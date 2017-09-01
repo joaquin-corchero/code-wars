@@ -52,6 +52,7 @@
     <Compile Include="GetTheMiddleCharacter\GetTheMiddleCharacter.cs" />
     <Compile Include="Graph\TreeOrder.cs" />
     <Compile Include="LengthOfMissingArray\LengthOfMissingArray.cs" />
+    <Compile Include="SmallFuckInterpreter\LengthOfMissingArray.cs" />
     <Compile Include="TortoiseRacing\TortoiseRacing.cs" />
     <Compile Include="WordA10n\WordA10n.cs" />
     <None Include="CountTheSmileyFaces\Readme.md" />
@@ -64,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumOfOddNumbers\SumOfOddNumbers.cs" />
     <None Include="LengthOfMissingArray\Readme.md" />
+    <None Include="SmallFuckInterpreter\Readme.md" />
     <None Include="TortoiseRacing\Readme.md" />
     <None Include="WordA10n\Readme.md" />
   </ItemGroup>
