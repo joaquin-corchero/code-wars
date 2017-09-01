@@ -73,6 +73,23 @@ namespace CodeWarsTests.SmallFuckInterpreter
             }
         }
 
+        internal string Prefix
+        {
+            get
+            {
+                if (NumberA == NumberB)
+                {
+                    return "=:";
+                }
+
+                if (NumberB > NumberA)
+                {
+                    return "2:";
+                }
+                return "1:";
+            }
+        }
+
         internal char Item { get; }
 
         internal Matches(char item, int numberA, int numberB)
@@ -83,17 +100,8 @@ namespace CodeWarsTests.SmallFuckInterpreter
         }
 
         public override string ToString()
-        {
-            var prefix = "1:";
-            if(NumberA == NumberB)
-            {
-                prefix = "=:";
-            }else if(NumberB > NumberA)
-            {
-                prefix = "2:";
-            }
-
-            return $"{prefix}{new String(Item, MaxNumber)}";
+        { 
+            return $"{Prefix}:{new String(Item, MaxNumber)}";
         }
     }
 
