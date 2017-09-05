@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Linq;
 using System.Text;
-using NUnit.Framework;
 
 namespace CodeWarsTests.WordA10n
 {

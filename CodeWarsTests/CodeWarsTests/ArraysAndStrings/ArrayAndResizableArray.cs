@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
-using Should.Fluent;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CodeWarsTests.ArraysAndStrings
 {
