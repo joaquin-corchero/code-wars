@@ -18,17 +18,17 @@ namespace CodeWarsTests.ArraysAndStrings
             {
                 if (char.IsWhiteSpace(chars[i]))
                 {
-                    for (var y = chars.Length -1; y > i +1; y--)
+                    for (var y = chars.Length - 1; y > i + 1; y--)
                     {
                         chars[y] = chars[y - 2];
                     }
                     chars[i] = '%';
-                    chars[i +1] = '2';
+                    chars[i + 1] = '2';
                     chars[i + 2] = '0';
                     i = i + 3;
                 }
             }
-            
+
             return string.Join("", chars);
         }
     }
