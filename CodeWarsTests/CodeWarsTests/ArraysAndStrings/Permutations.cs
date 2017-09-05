@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace CodeWarsTests.ArraysAndStrings
 {
@@ -15,7 +16,9 @@ namespace CodeWarsTests.ArraysAndStrings
             var aTwo = two.ToCharArray();
             Array.Sort(aTwo);
 
-            return Array.Equals(aOne, aTwo);
+            var result =  aOne.SequenceEqual(aTwo);
+
+            return result;
         }
     }
 

@@ -51,6 +51,7 @@
     <Compile Include="ArraysAndStrings\ArrayAndResizableArray.cs" />
     <Compile Include="ArraysAndStrings\AuniqueCharactersInString.cs" />
     <Compile Include="ArraysAndStrings\Permutations.cs" />
+    <Compile Include="ArraysAndStrings\URlify.cs" />
     <Compile Include="BuildAPileOfCubes\ASum.cs" />
     <Compile Include="CountTheSmileyFaces\CountTheSmileyFaces.cs" />
     <Compile Include="FindMissingLetter\FindMissingLetter.cs" />
