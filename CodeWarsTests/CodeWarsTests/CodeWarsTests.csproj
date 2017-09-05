@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraysAndStrings\ArrayAndResizableArray.cs" />
-    <Compile Include="ArraysAndStrings\AuniqueCharactersInString.cs" />
-    <Compile Include="ArraysAndStrings\Permutations.cs" />
-    <Compile Include="ArraysAndStrings\URlify.cs" />
+    <Compile Include="ArraysAndStrings\1-1AuniqueCharactersInString.cs" />
+    <Compile Include="ArraysAndStrings\1-2Permutations.cs" />
+    <Compile Include="ArraysAndStrings\1-3URlify.cs" />
     <Compile Include="BuildAPileOfCubes\ASum.cs" />
     <Compile Include="CountTheSmileyFaces\CountTheSmileyFaces.cs" />
     <Compile Include="FindMissingLetter\FindMissingLetter.cs" />
