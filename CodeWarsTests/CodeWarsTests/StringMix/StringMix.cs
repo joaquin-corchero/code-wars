@@ -54,41 +54,6 @@ namespace CodeWarsTests.SmallFuckInterpreter
             return string.Join("/", values);
             
         }
-
-        private static List<Match> GetMatches(Dictionary<char, int> h1, Dictionary<char, int> h2)
-        {
-            var matches = new List<Match>();
-            foreach (var item in h1)
-            {
-                if (!h2.ContainsKey(item.Key))
-                    continue;
-
-                if (item.Value < 2 && h2[item.Key] < 2)
-                    continue;
-
-                matches.Add(new Match(item.Key, item.Value, h2[item.Key]));
-            }
-            return matches;
-        }
-
-        private static Dictionary<char, int> GetCharCount(string input)
-        {
-            var result = new Dictionary<char, int>();
-            for(var i =0; i < input.Length; i ++)
-            {
-                if(!char.IsLower(input, i))
-                    continue;
-
-                var c1 = input[i];
-
-                if (result.ContainsKey(c1))
-                    result[c1] = result[c1] + 1;
-                else
-                    result.Add(c1, 1);
-            }
-
-            return result;
-        }
     }
 
     internal class Match
