@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Should.Fluent;
 using System;
 using System.Collections;
 using System.Linq;
@@ -38,23 +39,22 @@ namespace CodeWarsTests.ArraysAndStrings
     [TestFixture]
     public class AuniqueCharactersInStringTest
     {
-
-        [TestCase("abfhdjktj", ExpectedResult =false)]
-        [TestCase("qwerty", ExpectedResult = true)]
-        [TestCase("asdfg", ExpectedResult = true)]
-        [TestCase("aaaaaaaaaaaa", ExpectedResult = false)]
-        public bool IsUnique(string input)
+        [Test]
+        public void IsUnique()
         {
-            return AuniqueCharactersInString.IsUnique(input);
+            AuniqueCharactersInString.IsUnique("abfhdjktj").Should().Be.False();
+            AuniqueCharactersInString.IsUnique("qwerty").Should().Be.True();
+            AuniqueCharactersInString.IsUnique("asdfg").Should().Be.True();
+            AuniqueCharactersInString.IsUnique("aaaaaaaaaaaa").Should().Be.False();
         }
 
-        [TestCase("abfhdjktj", ExpectedResult = false)]
-        [TestCase("qwerty", ExpectedResult = true)]
-        [TestCase("asdfg", ExpectedResult = true)]
-        [TestCase("aaaaaaaaaaaa", ExpectedResult = false)]
-        public bool IsUniqueHash(string input)
+        [Test]
+        public void IsUniqueHash()
         {
-            return AuniqueCharactersInString.IsUniqueHash(input);
+            AuniqueCharactersInString.IsUniqueHash("abfhdjktj").Should().Be.False();
+            AuniqueCharactersInString.IsUniqueHash("qwerty").Should().Be.True();
+            AuniqueCharactersInString.IsUniqueHash("asdfg").Should().Be.True();
+            AuniqueCharactersInString.IsUniqueHash("aaaaaaaaaaaa").Should().Be.False();
         }
     }
 }

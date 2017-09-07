@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CodeWarsTests.SmallFuckInterpreter
+namespace CodeWarsTests.StringMix
 {
-    public class Mixing
+    public static class Mixing
     {
         public static string Mix(string s1, string s2)
         {
@@ -88,7 +88,7 @@ namespace CodeWarsTests.SmallFuckInterpreter
             }
         }
 
-        internal string Prefix
+        string Prefix
         {
             get
             {
