@@ -12,34 +12,34 @@ namespace CodeWarsTests.Sorting
     {
         public static int[] Sort(int[] input)
         {
-            if (input.Length == 1)
-                return input;
-
             var length = input.Length;
+            if (length == 1)
+                return input;
             var half = length / 2;
             var left = new int[half];
-            var right = new int[length % 2 == 0? half : half + 1];
-
-            for (var i = 0; i < input.Length; i++)
+            var rigth = new int[input.Length % 2 == 0 ? half : half + 1];
+            for (var i = 0; i < length; i++)
             {
                 if (i < half)
                     left[i] = input[i];
                 else
-                    right[i - half] = input[i];
+                    rigth[i - half] = input[i];
             }
 
             left = Sort(left);
-            right = Sort(right);
+            rigth = Sort(rigth);
 
-            return Merge(left, right);
+            var result = Merge(left, rigth);
+
+            return result;
         }
 
         static int[] Merge(int[] left, int[] right)
         {
             var result = new int[left.Length + right.Length];
-            var i = 0;
             var leftIndex = 0;
             var rightIndex = 0;
+            var i = 0;
             while (leftIndex < left.Length && rightIndex < right.Length)
             {
                 if (left[leftIndex] < right[rightIndex])
@@ -56,11 +56,17 @@ namespace CodeWarsTests.Sorting
                 i++;
             }
 
-            if (leftIndex < left.Length)
+            while (leftIndex < left.Length)
+            {
                 result[i] = left[leftIndex];
+                leftIndex++;
+            }
 
-            if (rightIndex < right.Length)
+            while (rightIndex < right.Length)
+            {
                 result[i] = right[rightIndex];
+                rightIndex++;
+            }
 
             return result;
         }
