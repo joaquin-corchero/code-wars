@@ -54,6 +54,7 @@
     <Compile Include="ArraysAndStrings\1-3URlify.cs" />
     <Compile Include="Sorting\BubleSort.cs" />
     <Compile Include="Sorting\InsertionSort.cs" />
+    <Compile Include="Sorting\QuickSort.cs" />
     <Compile Include="Sorting\MergeSort.cs" />
     <Compile Include="BuildAPileOfCubes\ASum.cs" />
     <Compile Include="CountTheSmileyFaces\CountTheSmileyFaces.cs" />
