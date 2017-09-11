@@ -7,28 +7,23 @@ namespace CodeWarsTests.Sorting
     {
         internal static int[] Sort(int[] input)
         {
-            if (input.Length == 1)
-                return input;
-            var isOrdered = false;
-            while (isOrdered == false)
+            while(true)
             {
                 var changes = false;
-                for (var i = 0; i < input.Length - 1; i++)
+                for(var i = 1; i < input.Length; i++)
                 {
-                    if (input[i] <= input[i + 1])
-                        continue;
-
-                    var tempI = input[i];
-                    var tempI1 = input[i + 1];
-                    input[i] = tempI1;
-                    input[i + 1] = tempI;
-                    changes = true;
+                    if(input[i -1] > input[i])
+                    {
+                        var temp = input[i];
+                        input[i] = input[i - 1];
+                        input[i - 1] = temp;
+                        changes = true;
+                    }
                 }
 
-                isOrdered = !changes;
+                if (!changes)
+                    return input;
             }
-
-            return input;
         }
     }
 
