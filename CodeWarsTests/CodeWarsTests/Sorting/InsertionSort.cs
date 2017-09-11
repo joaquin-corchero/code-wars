@@ -14,27 +14,21 @@ namespace CodeWarsTests.Sorting
     {
         public static int[] Sort(int[] input)
         {
-            var i = 1;
-            while(i < input.Length)
+            for(var i = 1; i < input.Length; i ++)
             {
                 var j = i;
-                while (j > 0 && input[j -1] > input[j])
+                while(j > 0 && input[j] < input[j-1])
                 {
-                    Swap(input, j, j -1);
+                    if(input[j] < input[j-1])
+                    {
+                        var temp = input[j - 1];
+                        input[j - 1] = input[j];
+                        input[j] = temp;
+                    }
                     j--;
                 }
-                i++;
             }
-
             return input;
-        }
-
-        static void Swap(int[] array, int source, int destination)
-        {
-            var a = array[source];
-            var b = array[destination];
-            array[source] = b;
-            array[destination] = a;
         }
     }
 
