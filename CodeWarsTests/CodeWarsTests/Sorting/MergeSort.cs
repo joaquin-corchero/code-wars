@@ -1,17 +1,26 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using Should.Fluent;
 
 namespace CodeWarsTests.Sorting
 {
+    /// <summary>
+    /// Merge sort is a sorting technique based on divide and conquer technique. With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms.
+    /// Merge sort first divides the array into equal halves and then combines them in a sorted manner.
+    /// </summary>
     public static class MergeSort
     {
         public static int[] Sort(int[] input)
         {
+            if (input.Length == 1)
+                return input;
+
             var length = input.Length;
             var half = length / 2;
             var left = new int[half];
-            var right = new int[length % 2 == 0 ? half : half + 1];
-            for (var i = 0; i < length; i++)
+            var right = new int[length % 2 == 0? half : half + 1];
+
+            for (var i = 0; i < input.Length; i++)
             {
                 if (i < half)
                     left[i] = input[i];
@@ -19,8 +28,8 @@ namespace CodeWarsTests.Sorting
                     right[i - half] = input[i];
             }
 
-            left = left.Length > 1 ? Sort(left) : left;
-            right = right.Length > 1 ? Sort(right) : right;
+            left = Sort(left);
+            right = Sort(right);
 
             return Merge(left, right);
         }
@@ -43,6 +52,7 @@ namespace CodeWarsTests.Sorting
                     result[i] = right[rightIndex];
                     rightIndex++;
                 }
+
                 i++;
             }
 
