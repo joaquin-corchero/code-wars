@@ -52,6 +52,7 @@
     <Compile Include="ArraysAndStrings\1-1AuniqueCharactersInString.cs" />
     <Compile Include="ArraysAndStrings\1-2Permutations.cs" />
     <Compile Include="ArraysAndStrings\1-3URlify.cs" />
+    <Compile Include="MagnetParticulesInBoxes\MagnetParticulesInBoxes.cs" />
     <Compile Include="Sorting\BubleSort.cs" />
     <Compile Include="Sorting\InsertionSort.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumOfOddNumbers\SumOfOddNumbers.cs" />
     <None Include="LengthOfMissingArray\Readme.md" />
+    <None Include="MagnetParticulesInBoxes\Readme.md" />
     <None Include="StringMix\Readme.md" />
     <None Include="TortoiseRacing\Readme.md" />
     <None Include="WordA10n\Readme.md" />
